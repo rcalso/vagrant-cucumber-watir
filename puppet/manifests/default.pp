@@ -44,6 +44,10 @@ package { 'nodejs':
   ensure => installed
 }
 
+package {'vim':
+  ensure => installed
+}
+
 # --- Ruby ---------------------------------------------------------------------
 
 exec { 'install_rvm':
