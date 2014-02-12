@@ -48,6 +48,10 @@ package {'vim':
   ensure => installed
 }
 
+package { 'openjdk-6-jre-headless':
+  ensure => installed
+}
+
 # --- Ruby ---------------------------------------------------------------------
 
 exec { 'install_rvm':
@@ -77,3 +81,5 @@ exec { 'install_rake':
   creates => "${home}/.rvm/bin/rake",
   require => Exec['install_ruby']
 }
+
+class { 'selenium_grid::hub': version => '2.21.0', }
