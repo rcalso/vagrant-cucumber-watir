@@ -82,4 +82,11 @@ exec { 'install_rake':
   require => Exec['install_ruby']
 }
 
+exec { 'install_cucumber':
+  command => "${as_vagrant} 'gem install cucumber'",
+  creates => "${home}/.rvm/bin/cucumber",
+  require => Exec['install_ruby']
+}
+
+
 class { 'selenium_grid::hub': version => '2.21.0', }
