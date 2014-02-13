@@ -92,6 +92,3 @@ exec { 'install_cucumber':
   creates => "${home}/.rvm/bin/cucumber",
   require => Exec['install_ruby']
 }
-
-
-class { 'selenium_grid::hub': version => '2.21.0', }
