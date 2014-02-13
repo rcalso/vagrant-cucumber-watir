@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+group :test do
+  gem 'cucumber'
+  gem 'rspec-expectations'
+  gem 'watir'
+  gem 'selenium-webdriver'
+  gem 'byebug'
+  gem 'headless'
+end
