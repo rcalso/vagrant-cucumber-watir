@@ -22,5 +22,6 @@ java -jar selenium-server-standalone-2.39.0.jar -role node  -hub http://192.168.
 You can go back to your Vagrant again and run the tests:
 ```
 cd testing/testing
-cucumber features
+bundle install
+bundle exec cucumber features
 ```
