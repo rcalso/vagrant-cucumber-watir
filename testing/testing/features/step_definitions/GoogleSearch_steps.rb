@@ -3,11 +3,11 @@ require 'byebug'
 
 Given(/^I am in the Google website$/) do
 capabilities = Selenium::WebDriver::Remote::Capabilities.new
-  capabilities.browser_name = :firefox 
-  @browser = Watir::Browser.new(  
-    :remote,  
+  capabilities.browser_name = :firefox
+  @browser = Watir::Browser.new(
+    :remote,
     :url => "http://10.0.2.2:5555/wd/hub",
-    :desired_capabilities => capabilities)  
+    :desired_capabilities => capabilities)
   @browser.goto 'http://www.google.com'
 end
 
@@ -21,6 +21,6 @@ end
 
 Then(/^"(.*?)" should be mentioned in the results$/) do |item|
   sleep 1
-  @browser.title.should include('hola mundo')
+  @browser.title.should include(item)
   @browser.quit
 end
